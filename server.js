@@ -44,9 +44,9 @@ server.get("/receitas", function (req , res){
 server.get('/receita/:index', function(req, res){
     const recipeIndex = req.params.index
     
-    const receita = receitas[recipeIndex]
+    const receita = recipeIndex[recipeIndex]
     
-    if (recipeIndex <= (receitas.length-1) || Number.isInteger(recipeIndex)) {
+    if (recipeIndex <= (recipeIndex.length-1) || Number.isInteger(recipeIndex)) {
         return res.render("receita", { receita })
     } else{
         res.status(404).render("not-found");
