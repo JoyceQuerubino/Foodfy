@@ -20,10 +20,10 @@ nunjucks.configure("views", {
 // Rota da página home
 server.get("/", function (req, res){
 
-    // Página de erro
-    server.use(function (req,res) {
+     // Página de erro
+     server.use(function (req,res) {
         res.status(404).render("not-found")
-    })
+    }) 
 
     return res.render("home", {items: dados})
 })
@@ -41,17 +41,13 @@ server.get("/receitas", function (req , res){
 })
 
 //Rota página de receita unica
-server.get('/receita/:index', function(req, res){
+server.get("/receita/:index", function(req,res) {
     const recipeIndex = req.params.index
-    
-    const receita = recipeIndex[recipeIndex]
-    
-    if (recipeIndex <= (recipeIndex.length-1) || Number.isInteger(recipeIndex)) {
-        return res.render("receita", { receita })
-    } else{
-        res.status(404).render("not-found");
+
+    if (!dados[recipeIndex]) {
+        return res.render('not-found')
     }
-    
+    return res.render('receita', { item: dados[recipeIndex]})
 })
 
 
