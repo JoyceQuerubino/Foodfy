@@ -155,17 +155,17 @@ h1{
 
 /*Rodapé*/
 footer{
-    bottom:0;
     width: 100%;
     background-color: #EEEEEE;
     height: 62px;
     
-    /*Centralizando texto do rodapé*/
+    bottom:0;
+    position: relative;
+
+    /*Centralizando texto do rodapé */
     display: grid;
     justify-items: center;
     align-items: center;
-
-    position: static;
 }
 
 footer p {
@@ -201,3 +201,16 @@ article p {
     margin-top: 20px;
 }
 
+/*
+################### PAGINA DE RECEITA ÚNICA #############
+*/
+
+.conteudo{
+    margin: 0 auto;
+    width: 95%;
+    max-width: 940px;
+    margin-bottom: 2.3%;
+}
+.receita-unica{
+
+}

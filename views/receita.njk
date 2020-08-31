@@ -3,9 +3,22 @@
 
 {% block content %}
 
-<h1>TESTE</h1>
+<div class="conteudo">
+    <div class="receita-unica">
+                    <div class="imagem-receita">
+                        <img src=" {{item.image}}" alt="imagem de {{ item.title }}">
+                    </div>
 
-
+                    <div class="conteudo-receita">
+                            <div class="titulo-card">
+                                <h2>{{item.title}}</h2>
+                            </div>
+                            <div class="autor-card">
+                                <h3>{{item.author}}</h3>
+                            </div>
+                    </div>
+    </div>
+</div class="conteudo">
 <script src="../scripts.js"></script>
 
 {% endblock %}
