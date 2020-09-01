@@ -214,3 +214,30 @@ article p {
 .receita-unica{
 
 }
+.imagem-receita img{
+    width: 940px;
+    height: 280px;
+    border-radius: 15px;
+}
+
+.conteudo-receita{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 3.9%;
+}
+
+.titulo-receita{
+    position: relative;
+    font-size: 30px;
+    font: bold;
+}
+
+.autor-receita{
+    margin-top: 0.3%;
+    font-size: 20px;
+    color: var(--cor-cinza);
+    font: normal;
+}
