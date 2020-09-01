@@ -18,6 +18,38 @@
                             </div>
                     </div>
     </div>
+
+    <div class="ingredientes">
+        <div class="titulo">
+            <h1>Ingredientes</h1>
+        </div>
+        <div class="texto">
+            <ul>
+                    {% for ingredient in receita.ingredients %}
+                    <li>{{item.ingredients}}</li>
+                    {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+     <div class="Preparo">
+        <div class="titulo">
+            <h1>Modo de preparo</h1>
+        </div>
+        <div class="texto">
+            <P>{{item.preparation}}</P>
+        </div>
+    </div>
+
+    <div class="Info-add">
+        <div class="titulo">
+            <h1>Informações adicionais</h1>
+        </div>
+        <div class="texto">
+            <P>{{item.information}}</P>
+        </div>
+    </div>
+
 </div>
 <script src="../scripts.js"></script>
 
