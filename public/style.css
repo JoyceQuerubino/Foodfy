@@ -211,9 +211,7 @@ article p {
     max-width: 940px;
     margin-bottom: 2.3%;
 }
-.receita-unica{
 
-}
 .imagem-receita img{
     width: 940px;
     height: 280px;
@@ -246,4 +244,17 @@ article p {
     font-size: 18px;
     color: #444444;
     line-height: 28px;
+}
+
+/*Mostrar/Esconder*/
+.input1{
+    display: none;
+}
+
+input:checked + .ingredientes .texto1{
+    display: none;
+}
+
+.button1{
+    cursor: pointer;
 }

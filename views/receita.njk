@@ -4,27 +4,29 @@
 {% block content %}
 
 <div class="conteudo">
-    <div class="receita-unica">
-                    <div class="imagem-receita">
-                        <img src=" {{item.image}}" alt="imagem de {{ item.title }}">
-                    </div>
 
-                    <div class="conteudo-receita">
-                            <div class="titulo-receita">
-                                <h2>{{item.title}}</h2>
-                            </div>
-                            <div class="autor-receita">
-                                <h3>{{item.author}}</h3>
-                            </div>
-                    </div>
-    </div>
+        <div class="imagem-receita">
+            <img src=" {{item.image}}" alt="imagem de {{ item.title }}">
+        </div>
 
+        <div class="conteudo-receita">
+            <div class="titulo-receita">
+                <h2>{{item.title}}</h2>
+            </div>
+            <div class="autor-receita">
+                <h3>{{item.author}}</h3>
+            </div>
+        </div>
+    
+    <input type="checkbox" id=item1 class="input1">
     <div class="ingredientes">
+        
         <div class="titulo">
             <h1>Ingredientes</h1>
         </div>
+        <label for="item1" class="button1">Esconder</label>
         <!-- Para o 'for' funcionar, todas as 3 varivaies precisam ter o mesmo nome em que aparecem no arquivo data.js-->
-        <div class="texto">
+        <div class="texto1">
              {% for ingredients in item.ingredients %}
                 <li>{{ingredients}}</li>
              {% endfor %}
