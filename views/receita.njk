@@ -24,7 +24,7 @@
             <h1>Ingredientes</h1>
         </div>
         <!-- Para o 'for' funcionar, todas as 3 varivaies precisam ter o mesmo nome em que aparecem no arquivo data.js-->
-        <div class="list-texto">
+        <div class="texto">
              {% for ingredients in item.ingredients %}
                 <li>{{ingredients}}</li>
              {% endfor %}
@@ -35,7 +35,7 @@
         <div class="titulo">
             <h1>Modo de preparo</h1>
         </div>
-        <div class="list-texto">
+        <div class="texto">
             {% for preparation in item.preparation %}
                 <li>{{preparation}}</li>
              {% endfor %}

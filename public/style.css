@@ -241,3 +241,9 @@ article p {
     color: var(--cor-cinza);
     font: normal;
 }
+
+.texto{
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+}
