@@ -7,3 +7,4 @@ for (let i=0; i < cards.length; i++) {
         window.location.href = `/receita/${i}`
     })
 }
+

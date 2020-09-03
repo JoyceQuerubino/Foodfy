@@ -23,12 +23,11 @@
         <div class="titulo">
             <h1>Ingredientes</h1>
         </div>
-        <div class="texto">
-            <ul>
-                    {% for ingredient in receita.ingredients %}
-                    <li>{{item.ingredients}}</li>
-                    {% endfor %}
-            </ul>
+        <!-- Para o 'for' funcionar, todas as 3 varivaies precisam ter o mesmo nome em que aparecem no arquivo data.js-->
+        <div class="list-texto">
+             {% for ingredients in item.ingredients %}
+                <li>{{ingredients}}</li>
+             {% endfor %}
         </div>
     </div>
 
@@ -36,8 +35,10 @@
         <div class="titulo">
             <h1>Modo de preparo</h1>
         </div>
-        <div class="texto">
-            <P>{{item.preparation}}</P>
+        <div class="list-texto">
+            {% for preparation in item.preparation %}
+                <li>{{preparation}}</li>
+             {% endfor %}
         </div>
     </div>
 
@@ -51,6 +52,7 @@
     </div>
 
 </div>
-<script src="../scripts.js"></script>
+
+<script src="scripts.js"></script>
 
 {% endblock %}
