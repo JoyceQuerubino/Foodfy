@@ -1,9 +1,8 @@
-        
 {% extends "layout.njk" %}
 
 {% block content %}
 
-<div class="conteudo">
+    <div class="conteudo">
 
         <div class="imagem-receita">
             <img src=" {{item.image}}" alt="imagem de {{ item.title }}">
@@ -17,44 +16,35 @@
                 <h3>{{item.author}}</h3>
             </div>
         </div>
-    
-    <input type="checkbox" id=item1 class="input1">
-    <div class="ingredientes">
-        
-        <div class="titulo">
+
+        <div class="ingredientes">
+
             <h1>Ingredientes</h1>
+            <p class="mostraEsconde">Mostrar</p>
+            <!-- Para o 'for' funcionar, todas as 3 varivaies precisam ter o mesmo nome em que aparecem no arquivo data.js-->
+            <div class="texto1">
+                {% for ingredients in item.ingredients %}
+                    <li>{{ingredients}}</li>
+                {% endfor %}
+            </div>
         </div>
-        <label for="item1" class="button1">Esconder</label>
-        <!-- Para o 'for' funcionar, todas as 3 varivaies precisam ter o mesmo nome em que aparecem no arquivo data.js-->
-        <div class="texto1">
-             {% for ingredients in item.ingredients %}
-                <li>{{ingredients}}</li>
-             {% endfor %}
-        </div>
-    </div>
 
-     <div class="Preparo">
-        <div class="titulo">
+        <div class="Preparo">
             <h1>Modo de preparo</h1>
+            <div class="texto">
+                {% for preparation in item.preparation %}
+                    <li>{{preparation}}</li>
+                {% endfor %}
+            </div>
         </div>
-        <div class="texto">
-            {% for preparation in item.preparation %}
-                <li>{{preparation}}</li>
-             {% endfor %}
-        </div>
-    </div>
 
-    <div class="Info-add">
-        <div class="titulo">
+        <div class="Info-add">
             <h1>Informações adicionais</h1>
+            <div class="texto">
+                <p>{{item.information}}</p>
+            </div>
         </div>
-        <div class="texto">
-            <P>{{item.information}}</P>
-        </div>
+
     </div>
-
-</div>
-
-<script src="scripts.js"></script>
 
 {% endblock %}
