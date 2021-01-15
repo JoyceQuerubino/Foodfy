@@ -17,10 +17,9 @@
             </div>
         </div>
 
-        <div class="ingredientes">
-
-            <h1>Ingredientes</h1>
-            <p class="mostraEsconde">Mostrar</p>
+        <h1>Ingredientes</h1>
+        <p class="mostrar">Mostrar</p>
+        <div class=" sessao ingredientes">
             <!-- Para o 'for' funcionar, todas as 3 varivaies precisam ter o mesmo nome em que aparecem no arquivo data.js-->
             <div class="texto1">
                 {% for ingredients in item.ingredients %}
@@ -29,8 +28,9 @@
             </div>
         </div>
 
-        <div class="Preparo">
-            <h1>Modo de preparo</h1>
+        <h1>Modo de preparo</h1>
+        <p class="mostrar">Mostrar</p>
+        <div class="sessao Preparo">
             <div class="texto">
                 {% for preparation in item.preparation %}
                     <li>{{preparation}}</li>
@@ -38,7 +38,7 @@
             </div>
         </div>
 
-        <div class="Info-add">
+        <div class="sessao Info-add">
             <h1>Informações adicionais</h1>
             <div class="texto">
                 <p>{{item.information}}</p>

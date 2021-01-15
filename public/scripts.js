@@ -9,7 +9,15 @@ for (let i = 0; i < cards.length; i++) {
 }
 
 // Ação de mostrar e esconder
+const btnmostra = document.querySelectorAll(".mostrar");
+const sessao = document.querySelector(".sessao");
 
-const teste = document.querySelectorAll(".mostraEsconde");
+function mostrarEsconder() {
+  sessao.classList.toggle("onOff");
+}
 
-console.log("TESTE");
+btnmostra.forEach(function (item, index) {
+  console.log(index);
+
+  item.addEventListener("click", mostrarEsconder);
+});
